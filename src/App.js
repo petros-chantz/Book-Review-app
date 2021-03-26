@@ -1,9 +1,13 @@
 import './App.css';
+import { AppWrapper } from "./AppStyles";
+import NavBar from './Components/NavBar/NavBar';
 
-function App() {
+export default function App() {
   return (
-    <h1>Hello I'm book Review App</h1>
+    <AppWrapper>
+      <NavBar/>
+    </AppWrapper>
   );
 }
 
-export default App;
+
