@@ -12,4 +12,7 @@ export const AppWrapper = styled.div`
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
 `;

@@ -1,11 +1,13 @@
 import './App.css';
 import { AppWrapper } from "./AppStyles";
-import NavBar from './Components/NavBar/NavBar';
+import BodyTitleBox from './BodyTitleBox';
+import ShowcaseBooks from './ShowcaseBooks';
 
 export default function App() {
   return (
     <AppWrapper>
-      <NavBar/>
+      <BodyTitleBox />
+      <ShowcaseBooks/>
     </AppWrapper>
   );
 }
