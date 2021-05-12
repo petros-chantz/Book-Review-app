@@ -1,39 +1,24 @@
-import React from "react";
 import styled from "styled-components";
-import { HashLink } from "react-router-hash-link";
+import { breakpoints } from "./../styles/Media";
 
-const LinkWrapper = styled.div`
-    display: grid;
-    place-items: center;
+export const Link = styled.a`
+  color: ${(props) => props.theme.color.black};
+  font-weight: ${(props) => props.weight};
+  cursor: pointer;
+  text-decoration: none;
 
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 1rem; //16px
+  }
 `;
 
-const LinkElement = styled.p`
-    color: ${props => props.linkTextColor};
-    font-size: ${props => props.linkFontSize}px;
-    font-weight: ${props => props.linkFontWeight};
-    text-decoration: none;
+export const LinkFooter = styled(Link)`
+  text-decoration: underline;
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 1.25rem; //20px
+  }
 
-    :hover{
-        text-decoration: underline;
-    }
-
-    @media screen and (max-width: 800px){
-        text-align: center;
-    }
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 1rem; //16px
+  }
 `;
-
-export default function Link(props) {
-
-    return (
-        <LinkWrapper>
-            <HashLink smooth to={props.linkDestination} >
-                <LinkElement
-                    linkTextColor={props.linkTextColor}
-                    linkFontSize={props.linkFontSize}
-                    linkFontWeight={props.linkFontWeight}
-                >{props.linkName}</LinkElement>
-            </HashLink>
-        </LinkWrapper>
-    );
-}

@@ -1,31 +1,83 @@
-import React from "react";
 import styled from "styled-components";
+import { breakpoints } from "./../styles/Media";
 
-const TextWrapper = styled.div`
-    display: grid;
-    place-items: center;
+export const Text = styled.p`
+  color: ${(props) => props.theme.color.text};
+  font-weight: ${(props) => props.weight};
+  text-align: ${(props) => props.align};
 `;
 
-const TextElement = styled.h3`
-    color: ${props => props.textColor};
-    font-size: ${props => props.textSize}px;
-    font-weight: ${props => props.textWeight};
-    text-decoration: none;
-    text-align: ${props => props.textAlign}
+export const TextRegular = styled(Text)`
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 2.625em; //42px
+  }
+
+  @media screen and (max-width: ${breakpoints.laptopLScreen}) {
+    font-size: 2.25rem; //36px
+  }
+
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 1.75rem; //28px
+  }
 `;
 
-export default function Text(props) {
+export const TextSmall = styled(Text)`
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 1.25rem; //20px
+  }
 
-    return (
-        <TextWrapper>
-            <TextElement
-                textColor={props.textColor}
-                textSize={props.textSize}
-                textWeight={props.textWeight}
-                textAlign={props.textAlign}
-            >
-                {props.text}    
-            </TextElement>
-        </TextWrapper>
-    );
-}
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 1rem; //16px
+  }
+`;
+
+export const TitleNavbar = styled.h5`
+  color: ${(props) => props.theme.color.text};
+  font-weight: 400;
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 3.5rem; //56px
+  }
+
+  @media screen and (max-width: ${breakpoints.laptopLScreen}) {
+    font-size: 3.125rem; //50px
+  }
+
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 3rem; //48px
+  }
+`;
+
+export const Title = styled.h3`
+  color: ${(props) => props.theme.color.text};
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 8.125rem;
+  }
+  @media screen and (max-width: ${breakpoints.laptopLScreen}) {
+    font-size: 6rem;
+  }
+  @media screen and (max-width: ${breakpoints.tabletScreen}) {
+    font-size: 4.6875rem;
+  }
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 3.125rem;
+  }
+`;
+
+export const Subtitle = styled.h5`
+  color: ${(props) => props.theme.color.text};
+  font-weight: 400;
+  text-align: center;
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 3.75rem;
+  }
+
+  @media screen and (max-width: ${breakpoints.tabletScreen}) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 1.875rem;
+  }
+`;
