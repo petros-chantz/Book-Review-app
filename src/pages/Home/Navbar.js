@@ -38,10 +38,10 @@ const NavbarContainer = styled(Container)`
 export default function Navbar() {
   return (
     <NavbarContainer columns="repeat(4,1fr)">
-      <NavbarLink HashLink="spotlight" HashLinkName="spotlight" />
-      <NavbarLink HashLink="search" HashLinkName="search" />
-      <NavbarLink HashLink="favourites" HashLinkName="favourites" />
-      <NavbarLink HashLink="contact" HashLinkName="contact" />
+      <NavbarLink HashLink="/#spotlight" HashLinkName="spotlight" />
+      <NavbarLink HashLink="/#search" HashLinkName="search" />
+      <NavbarLink HashLink="/#favourites" HashLinkName="favourites" />
+      <NavbarLink HashLink="/#contact" HashLinkName="contact" />
     </NavbarContainer>
   );
 }

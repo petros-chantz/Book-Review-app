@@ -70,6 +70,25 @@ export const Title = styled.h3`
   }
 `;
 
+export const TitlePages = styled.h4`
+  color: ${(props) => props.theme.color.black};
+  font-weight: 700;
+  text-align: left;
+
+  @media screen and (max-width: ${breakpoints.screen4k}) {
+    font-size: 8.125rem;
+  }
+  @media screen and (max-width: ${breakpoints.laptopLScreen}) {
+    font-size: 6rem;
+  }
+  @media screen and (max-width: ${breakpoints.tabletScreen}) {
+    font-size: 4.6875rem;
+  }
+  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+    font-size: 3.125rem;
+  }
+`;
+
 export const Subtitle = styled.h5`
   color: ${(props) => props.theme.color.black};
   font-weight: 500;
