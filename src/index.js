@@ -1,11 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './App';
+import React from "react";
+
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+export default function Provider() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
