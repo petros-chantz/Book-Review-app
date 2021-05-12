@@ -10,6 +10,10 @@ export const Link = styled.a`
   @media screen and (max-width: ${breakpoints.screen4k}) {
     font-size: 1rem; //16px
   }
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 export const LinkFooter = styled(Link)`

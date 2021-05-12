@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  border: none;
-  background-color: ${(props) => props.theme.color.background};
-  padding: 10px;
+  background-color: ${(props) =>
+    props.pressed ? props.theme.color.green : props.theme.color.white};
+  color: ${(props) =>
+    props.pressed ? props.theme.color.white : props.theme.color.black};
+  padding: 10px 20px 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid ${(props) => props.theme.color.green};
   font-size: 1rem;
   font-weight: 400;
 
@@ -13,15 +17,8 @@ export const Button = styled.button`
   }
 `;
 
-export const ButtonCustomize = styled.button`
-  background-color: ${(props) => props.theme.color.background};
-  padding: 10px;
+export const ItemButton = styled.button`
+  border: none;
+  background-color: ${(props) => props.theme.color.green};
   cursor: pointer;
-  border: 2px solid ${(props) => props.theme.color.text};
-  border-radius: 5px;
-
-  :hover {
-    background-color: ${(props) => props.theme.color.text};
-    color: ${(props) => props.theme.color.background};
-  }
 `;
