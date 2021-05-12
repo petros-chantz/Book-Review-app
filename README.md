@@ -1,3 +1,3 @@
 # Book Review App
 
-Search a book and find the relevant book review made by New York Times.
+React app utilizing New York Times's Book Review REST API to let users discover and save new books.
