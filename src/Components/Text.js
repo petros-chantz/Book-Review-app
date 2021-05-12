@@ -52,9 +52,9 @@ export const TextNavbar = styled.p`
 `;
 
 export const Title = styled.h3`
-  color: ${(props) => props.theme.color.text};
-  font-weight: 600;
-  text-align: center;
+  color: ${(props) => props.theme.color.black};
+  font-weight: 700;
+  text-align: left;
 
   @media screen and (max-width: ${breakpoints.screen4k}) {
     font-size: 8.125rem;
@@ -71,9 +71,9 @@ export const Title = styled.h3`
 `;
 
 export const Subtitle = styled.h5`
-  color: ${(props) => props.theme.color.text};
-  font-weight: 400;
-  text-align: center;
+  color: ${(props) => props.theme.color.black};
+  font-weight: 500;
+  text-align: left;
   @media screen and (max-width: ${breakpoints.screen4k}) {
     font-size: 3.75rem;
   }

@@ -25,7 +25,8 @@ const NavbarContainer = styled(Container)`
     place-items: center;
     padding: 0px;
   }
-  @media screen and (max-width: ${breakpoints.mobileLScreen}) {
+
+  @media screen and (max-width: ${breakpoints.tabletScreen}) {
     grid-template-columns: 1fr;
     gird-template-rows: repeat(4, 1fr);
     place-items: center end;
