@@ -31,19 +31,23 @@ export const TextSmall = styled(Text)`
   }
 `;
 
-export const TitleNavbar = styled.h5`
-  color: ${(props) => props.theme.color.text};
+export const TextNavbar = styled.p`
+  color: ${(props) => props.theme.color.white};
   font-weight: 400;
   @media screen and (max-width: ${breakpoints.screen4k}) {
-    font-size: 3.5rem; //56px
+    font-size: 2.625em; //42px
   }
 
   @media screen and (max-width: ${breakpoints.laptopLScreen}) {
-    font-size: 3.125rem; //50px
+    font-size: 2.25rem; //36px
   }
 
   @media screen and (max-width: ${breakpoints.mobileLScreen}) {
-    font-size: 3rem; //48px
+    font-size: 1.75rem; //28px
+  }
+
+  :hover {
+    text-decoration: underline;
   }
 `;
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "./../styles/Media";
 
 export const Link = styled.a`
-  color: ${(props) => props.theme.color.black};
+  color: ${(props) => props.theme.color.white};
   font-weight: ${(props) => props.weight};
   cursor: pointer;
   text-decoration: none;
@@ -13,6 +13,7 @@ export const Link = styled.a`
 `;
 
 export const LinkFooter = styled(Link)`
+  color: ${(props) => props.theme.color.black};
   text-decoration: underline;
   @media screen and (max-width: ${breakpoints.screen4k}) {
     font-size: 1.25rem; //20px
