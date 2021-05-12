@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "./../styles/Media";
 
 export const Link = styled.a`
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.black};
   font-weight: ${(props) => props.weight};
   cursor: pointer;
   text-decoration: none;

@@ -13,7 +13,8 @@ export const Button = styled.button`
   font-weight: 400;
 
   :hover {
-    text-decoration: underline;
+    background-color: ${(props) => props.theme.color.green};
+    color: ${(props) => props.theme.color.white};
   }
 `;
 

@@ -38,19 +38,19 @@ const ButtonContainer = styled(Container)`
 `;
 
 export default function BookItem(props) {
-  const { news } = props;
-  console.log(news);
+  const { books } = props;
+  console.log(books);
   return (
     <ItemContainer width={props.width} height={props.height}>
-      <Container place="center start">
-        <TextSmall>type</TextSmall>
+      <Container place="center end">
+        <TextSmall>{books.results.list_name}</TextSmall>
       </Container>
       <Container place="center end">
-        <TextSmall>author</TextSmall>
+        <TextSmall>{books.results.books[0].author}</TextSmall>
       </Container>
       <Container place="center start">
         <TextRegular weight="600" align="left">
-          title
+          {books.results.books[0].description}
         </TextRegular>
       </Container>
       <ButtonContainer>
