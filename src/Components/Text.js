@@ -23,7 +23,7 @@ export const TextRegular = styled(Text)`
 `;
 
 export const TextSmall = styled(Text)`
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.black};
   @media screen and (max-width: ${breakpoints.screen4k}) {
     font-size: 1.25rem; //20px
   }

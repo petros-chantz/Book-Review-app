@@ -22,4 +22,9 @@ export const ItemButton = styled.button`
   border: none;
   background-color: ${(props) => props.theme.color.green};
   cursor: pointer;
+  transition-duration: 0.5s;
+
+  :hover {
+    transform: scale(2);
+  }
 `;

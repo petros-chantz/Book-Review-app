@@ -11,10 +11,8 @@ export default function App() {
   return (
     <Router>
       <Home />
-      {/* <Spotlight /> */}
-      <Search />
-      <Favourites />
-      <Contact />
+      <Spotlight />
+      <Search />/
     </Router>
   );
 }

@@ -46,11 +46,11 @@ export default function BookItem(props) {
         <TextSmall>{books.results.list_name}</TextSmall>
       </Container>
       <Container place="center end">
-        <TextSmall>{books.results.books[0].author}</TextSmall>
+        <TextSmall>{books.results.books[props.number].author}</TextSmall>
       </Container>
       <Container place="center start">
         <TextRegular weight="600" align="left">
-          {books.results.books[0].description}
+          {books.results.books[props.number].description}
         </TextRegular>
       </Container>
       <ButtonContainer>

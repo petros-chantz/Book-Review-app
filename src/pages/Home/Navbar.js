@@ -8,7 +8,7 @@ import { breakpoints } from "./../../styles/Media";
 function NavbarLink(props) {
   return (
     <>
-      <Container place="center">
+      <Container place="center end">
         <HashLink smooth to={props.HashLink}>
           <TextNavbar>{props.HashLinkName}</TextNavbar>
         </HashLink>
@@ -18,13 +18,7 @@ function NavbarLink(props) {
 }
 
 const NavbarContainer = styled(Container)`
-  place-items: center end;
-  padding: 0px 100px 0px 300px;
-
-  @media screen and (max-width: ${breakpoints.laptopScreen}) {
-    place-items: center;
-    padding: 0px;
-  }
+  padding: 50px 100px 0px 0px;
 
   @media screen and (max-width: ${breakpoints.tabletScreen}) {
     grid-template-columns: 1fr;
@@ -37,7 +31,7 @@ const NavbarContainer = styled(Container)`
 
 export default function Navbar() {
   return (
-    <NavbarContainer columns="repeat(4,1fr)">
+    <NavbarContainer rows="repeat(4,1fr)" place="center end">
       <NavbarLink HashLink="/#spotlight" HashLinkName="spotlight" />
       <NavbarLink HashLink="/#search" HashLinkName="search" />
       <NavbarLink HashLink="/#favourites" HashLinkName="favourites" />
